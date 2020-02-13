@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="com.urbandroid.sleep.captcha.example"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+    >
+
+        <activity
+            android:name=".PrimeFactorCaptchaActivity"
+            android:launchMode="singleTop"
+            android:label="@string/captcha_label"
+            android:exported="true"
+            >
+
+            <!-- Should this Captcha have difficulty settings?-->
+            <meta-data android:name="com.urbandroid.sleep.captcha.meta.has_difficulty" android:value="true"/>
+
+            <intent-filter>
+                <!-- This filter is needed for the Captcha to work-->
+                <action android:name="com.urbandroid.sleep.captcha.intent.action.OPEN"/>
+
+                <!-- This filter allows Settings for CAPTCHA -->
+                <!--<action android:name="com.urbandroid.sleep.captcha.intent.action.CONFIG"/>-->
+
+                <!-- Uncomment for testing - captcha will show up in launcher as standalone app
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN"/>
+                -->
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

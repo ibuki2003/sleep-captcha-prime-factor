@@ -1,0 +1,103 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="#234"
+             android:orientation="vertical"
+             >
+
+    <TextView
+        android:id="@+id/timeout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/q_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:padding="15dp"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="fill_parent"
+        android:layout_width="wrap_content"
+        android:layout_alignParentTop="true"
+        android:columnCount="3" >
+        <Button
+            android:id="@+id/button_2"
+            android:text="2"
+            android:layout_column="0" android:layout_row="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill_horizontal" />
+        <Button
+            android:id="@+id/button_3"
+            android:text="3"
+            android:layout_column="1" android:layout_row="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill_horizontal" />
+        <Button
+            android:id="@+id/button_5"
+            android:text="5"
+            android:layout_column="2" android:layout_row="0"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill_horizontal" />
+        <Button
+            android:id="@+id/button_7"
+            android:text="7"
+            android:layout_column="0" android:layout_row="1"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill_horizontal" />
+        <Button
+            android:id="@+id/button_11"
+            android:text="11"
+            android:layout_column="1" android:layout_row="1"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill_horizontal" />
+        <Button
+            android:id="@+id/button_13"
+            android:text="13"
+            android:layout_column="2" android:layout_row="1"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill_horizontal" />
+        <Button
+            android:id="@+id/button_17"
+            android:text="17"
+            android:layout_column="0" android:layout_row="2"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill_horizontal" />
+        <Button
+            android:id="@+id/button_19"
+            android:text="19"
+            android:layout_column="1" android:layout_row="2"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill_horizontal" />
+        <Button
+            android:id="@+id/button_23"
+            android:text="23"
+            android:layout_column="2" android:layout_row="2"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill_horizontal" />
+    </GridLayout>
+
+</LinearLayout>
