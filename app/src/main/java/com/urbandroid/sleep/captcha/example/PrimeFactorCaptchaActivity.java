@@ -35,10 +35,10 @@ public class PrimeFactorCaptchaActivity extends Activity implements OnClickListe
     private static final int difficulties[][] = { // max count
         // (min prime count), 2, 3, 5, 7, 11, 13, 17, 19, 23
         {5, 2, 3, 2, 1, 0, 0, 0, 0, 0},
-        {5, 1, 3, 1, 2, 0, 0, 0, 0, 0},
         {6, 1, 3, 1, 2, 2, 2, 0, 0, 0},
-        {7, 0, 3, 0, 2, 2, 2, 2, 0, 0},
-        {8, 0, 2, 0, 2, 2, 2, 2, 2, 2},
+        {7, 1, 3, 1, 2, 2, 2, 2, 0, 0},
+        {8, 1, 2, 1, 2, 2, 2, 2, 2, 2},
+        {10, 1, 5, 1, 5, 5, 5, 5, 5, 5},
     };
 
     private long now_num;
