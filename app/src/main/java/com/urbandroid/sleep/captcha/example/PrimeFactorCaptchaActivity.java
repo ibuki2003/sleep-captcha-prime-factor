@@ -65,7 +65,10 @@ public class PrimeFactorCaptchaActivity extends Activity implements OnClickListe
         
         for( int i=0; i < buttons.length; i++ ) {
             final Button b = (Button) findViewById(buttons[i]);
-            b.setOnClickListener(this);
+            if(difficulties[captchaSupport.getDifficulty() - 1][i+1] > 0)
+                b.setOnClickListener(this);
+            else
+                b.setEnabled(false);
         }
 
         reset();
