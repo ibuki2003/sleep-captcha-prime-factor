@@ -24,10 +24,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_gravity="right|center_vertical" 
         android:layout_marginTop="10dp"
         android:padding="15dp"
         android:textColor="#fff"
-        android:textSize="30sp"
+        android:textSize="35sp"
         android:textStyle="bold" />
 
     <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
