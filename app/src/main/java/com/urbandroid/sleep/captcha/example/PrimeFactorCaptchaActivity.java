@@ -118,15 +118,24 @@ public class PrimeFactorCaptchaActivity extends Activity implements OnClickListe
         int df = captchaSupport.getDifficulty() - 1; // [1,5] => [0,4]
         int sum;
         long r;
+        boolean fl;
         do{
+            fl = false;
             sum = 0;
             r = 1L;
             for(int i = 0; i < primes.length; i++ ) {
                 int pc = generator.nextInt(difficulties[df][i+1]+1);
                 sum += pc;
-                for(int j = 0; j < pc; ++j)r*=primes[i];
+                for(int j = 0; j < pc; ++j){
+                    r*=primes[i];
+                    if(Long.MAX_VALUE / primes[i] < r) { // overflow!
+                        fl=true;
+                        break;
+                    }
+                }
+                if(fl)break;
             }
-        }while(sum<difficulties[df][0]);
+        }while(!fl && sum<difficulties[df][0]);
         return r;
     }
 
