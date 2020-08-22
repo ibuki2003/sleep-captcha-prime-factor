@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
-    package="com.urbandroid.sleep.captcha.example"
+    package="dev.fuwa.android.sleep_captcha_prime"
     xmlns:android="http://schemas.android.com/apk/res/android"
     >
 

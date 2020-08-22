@@ -1,4 +1,4 @@
-package com.urbandroid.sleep.captcha.example;
+package dev.fuwa.android.sleep_captcha_prime;
 
 import android.app.Activity;
 import android.content.Intent;

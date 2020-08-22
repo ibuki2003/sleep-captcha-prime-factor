@@ -49,7 +49,7 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.1"
     defaultConfig {
-        applicationId "com.onyx.android.demo"
+        applicationId "dev.fuwa.android.sleep_captcha_prime"
         minSdkVersion 15
         targetSdkVersion 28
         versionCode 2
