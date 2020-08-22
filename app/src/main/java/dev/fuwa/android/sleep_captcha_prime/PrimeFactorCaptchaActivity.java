@@ -74,17 +74,20 @@ public class PrimeFactorCaptchaActivity extends Activity implements OnClickListe
         reset();
     }
 
-    private void reset() {
-        now_num = randomNumber();
+    private void update_qvalue_text() {
         final TextView captchaTextView = (TextView) findViewById(R.id.q_value);
         captchaTextView.setText(String.valueOf(now_num));
+    }
+
+    private void reset() {
+        now_num = randomNumber();
+        update_qvalue_text();
     }
 
     private void div(long p) {
         if(now_num%p==0){
             now_num/=p;
-            final TextView captchaTextView = (TextView) findViewById(R.id.q_value);
-            captchaTextView.setText(String.valueOf(now_num));
+            update_qvalue_text();
             if(now_num == 1){
                 captchaSupport.solved();
                 finish();
