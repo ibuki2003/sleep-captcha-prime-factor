@@ -41,7 +41,10 @@ public class PrimeFactorCaptchaActivity extends Activity implements OnClickListe
         {10, 1, 5, 1, 5, 5, 5, 5, 5, 5},
     };
 
+    private static final int question_count = 3;
+
     private long now_num;
+    private int remain_count;
 
     private CaptchaSupport captchaSupport; // include this in every captcha
 
@@ -79,7 +82,18 @@ public class PrimeFactorCaptchaActivity extends Activity implements OnClickListe
         captchaTextView.setText(String.valueOf(now_num));
     }
 
+    private void update_count_text() {
+        final TextView textView = (TextView) findViewById(R.id.remain_count);
+        textView.setText((question_count - remain_count + 1) + "/" + question_count);
+    }
+
     private void reset() {
+        regenerate();
+        remain_count = question_count;
+        update_count_text();
+    }
+
+    private void regenerate() {
         now_num = randomNumber();
         update_qvalue_text();
     }
@@ -89,8 +103,14 @@ public class PrimeFactorCaptchaActivity extends Activity implements OnClickListe
             now_num/=p;
             update_qvalue_text();
             if(now_num == 1){
-                captchaSupport.solved();
-                finish();
+                remain_count--;
+                update_count_text();
+                if (remain_count == 0) {
+                    captchaSupport.solved();
+                    finish();
+                } else {
+                    regenerate();
+                }
             }
         }else{
             reset();
